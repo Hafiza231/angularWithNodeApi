@@ -1,0 +1,33 @@
+<div class="container">
+  <mat-card>
+    <form class="example-form" [formGroup]="empform" (ngSubmit)="onSubmit()">
+        <h3>Employee Detail form</h3>
+        <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="Ex. 1" formControlName="id"  required>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="Ex. fiza" formControlName="firstName"  required>
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Ex. valjiwala" formControlName="lastName" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Salary</mat-label>
+            <input matInput placeholder="Ex. 2000" formControlName="salary"  required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Designation</mat-label>
+            <input matInput placeholder="Ex. Manager" formControlName="designation" required>
+        </mat-form-field>  
+        <button mat-raised-button color="primary" type="submit" [disabled]="!empform.valid" >Submit</button>
+      
+      </form>
+</mat-card>
+</div>
+

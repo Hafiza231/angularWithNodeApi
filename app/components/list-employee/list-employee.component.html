@@ -1,0 +1,32 @@
+<app-spinner *ngIf="loader"></app-spinner>
+<div class="mat-elevation-z8">
+    <h3>Employee List</h3>
+      <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Salary</th>            
+                <th>Designation</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of list">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.salary}}</td>
+                <td>{{item.designation}}</td>
+                <td><a mat-fab color="accent" routerLink="/edit/{{item.id}}"><mat-icon>edit</mat-icon></a></td>
+                <td><a mat-fab color="primary" (click)="OpenDialog(item.id)"><mat-icon>delete</mat-icon></a></td>
+            </tr>
+        </tbody>
+      
+     
+    </table>
+  
+    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+  </div>

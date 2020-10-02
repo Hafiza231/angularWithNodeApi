@@ -1,0 +1,14 @@
+<p>
+  <mat-toolbar color="primary">
+    <span>Demo node-angular-app</span>
+    <span class="example-spacer"></span>
+      <div class="navbar">
+        <ul>
+          <li><a [routerLink]="['/add']" routerLinkActive="router-link-active" >Add </a></li>
+          <li><a [routerLink]="['/list']" routerLinkActive="router-link-active" >List </a></li>
+        </ul>
+      </div>
+  </mat-toolbar>
+</p>
+
+<router-outlet></router-outlet>
